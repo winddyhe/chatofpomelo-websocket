@@ -1,6 +1,9 @@
 var pomelo = require('pomelo');
 var routeUtil = require('./app/util/routeUtil');
 var abuseFilter = require('./app/servers/chat/filter/abuseFilter');
+var helloWorld = require('./app/components/HelloWorld');
+var timeReport = require('./app/modules/timeReport');
+
 /**
  * Init app for client.
  */
@@ -39,6 +42,12 @@ app.configure('production|development', function() {
 app.configure('production|development', 'chat', function(){
     app.filter(abuseFilter());
 });
+
+app.configure('production|development', 'master', function(){
+    app.load(helloWorld, { interval:5000 });
+});
+
+app.registerAdmin(timeReport, { app: app });
 
 // start app
 app.start();
