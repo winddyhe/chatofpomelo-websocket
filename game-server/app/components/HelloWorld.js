@@ -19,7 +19,7 @@ HelloWorld.prototype.start = function(cb)
     console.log('Hello World Start');
     var self = this;
     this.timerId = setInterval(function(){
-        console.log(self.app.getServerId() + ': Helllo World!');
+        //console.log(self.app.getServerId() + ': Helllo World!');
     }, this.interval);
     process.nextTick(cb);
 };

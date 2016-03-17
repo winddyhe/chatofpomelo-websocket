@@ -5,11 +5,10 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-			"program": "${workspaceRoot}/app.js",
+			"program": "${workspaceRoot}/game-server/app.js",
 			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}",
-			"preLaunchTask": null,
 			"runtimeExecutable": null,
 			"runtimeArgs": [
 				"--nolazy"
@@ -25,13 +24,7 @@
 			"name": "Attach",
 			"type": "node",
 			"request": "attach",
-			"port": 5858,
-			"address": "localhost",
-			"restart": false,
-			"sourceMaps": false,
-			"outDir": null,
-			"localRoot": "${workspaceRoot}",
-			"remoteRoot": null
+			"port": 5858
 		}
 	]
 }

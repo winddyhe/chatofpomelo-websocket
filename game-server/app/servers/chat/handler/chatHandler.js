@@ -44,7 +44,7 @@ handler.send = function(msg, session, next) {
 	}
     var routeParam = Math.floor(Math.random()*10);
     this.app.rpc.time.timeRemote.getCurrentTime(routeParam, "Hello", routeParam, function(hour, min, sec){
-        console.log("-----Remote Time: " + hour + ":" + min + ":" + sec);        
+        //console.log("-----Remote Time: " + hour + ":" + min + ":" + sec);        
     });
     
 	next(null, {

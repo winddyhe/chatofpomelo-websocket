@@ -8,8 +8,8 @@ exp.chat = function(session, msg, app, cb) {
 		cb(new Error('can not find chat servers.'));
 		return;
 	}
-
-	var res = dispatcher.dispatch(session.get('rid'), chatServers);
+    
+	var res = dispatcher.dispatch(1, chatServers);
 
 	cb(null, res.id);
 };
@@ -22,7 +22,7 @@ exp.time = function(session, msg, app, cb) {
 		return;
 	}
     
-    console.log("----Time Server ID: " + session);
+    //console.log("----Time Server ID: " + session);
     
     var res = dispatcher.dispatch(session, timeServers);
     
